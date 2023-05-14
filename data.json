@@ -1,0 +1,33 @@
+[
+    {
+        "name": "john",
+        "quantity": 2,
+        "price": 30,
+        "image":"https://intellipaat.com/blog/wp-content/uploads/2022/01/image-134.png"
+    },
+    {
+        "name": "Becky",
+        "quantity": 3,
+        "price": 45,
+        "image":"https://www.netsolutions.com/insights/wp-content/uploads/2021/07/what-is-amazon-web-services-aws.jpg"
+    },
+    {
+        "name": "Vi",
+        "quantity": 10,
+        "price": 120,
+        "image":""
+    },
+    {
+        "name": "Kareem",
+        "quantity": 1,
+        "price": 10,
+        "image":""
+    },
+    {
+        "name": "Victoria",
+        "quantity": 4,
+        "price": 65,
+        "image":""
+    }
+
+]
