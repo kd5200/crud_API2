@@ -92,7 +92,7 @@ const port = 8080
 
 mongoose.set("strictQuery", false)
 mongoose.
-connect('MongooseDB connection URL')
+connect('MongooseDB connection string inserted here')
 .then(() => {
     app.listen(port, () =>{
         console.log('operating on port 8080')
