@@ -3,18 +3,16 @@ const mongoose = require('mongoose')
 const Product = require('./models/productModel')
 const app = express()
 
-app.use(express.json())
+app.use(express.json())     
 
+// Initialization route to make sure my API can respond
 app.get("/", (req,res) => {
     res.send('NODE IS ALIVE ')
 
 }) 
 
-app.get("/blog", (req,res) => {
-    res.send('blog some nodeMON')
 
-}) 
-
+//Fetching All information associated with my Products MongoDB Model
 app.get("/products", async(req,res) => {
     try {
         const product = await Product.find({});
@@ -26,7 +24,7 @@ app.get("/products", async(req,res) => {
 })
 
 
-//Fetch product by ID 
+// "Fetching products by ID" 
 app.get("/products/:id", async(req,res) => {
     try {
         const {id} = req.params;
@@ -39,8 +37,8 @@ app.get("/products/:id", async(req,res) => {
 })
 
 
-// POST METHOD
-app.post("/product", async(req,res) => {
+// (POST METHOD) "Saving a product"
+app.post("/product/capture", async(req,res) => {
     try {
         const product = await Product.create(req.body)
         res.status(200).json(product);
@@ -87,12 +85,9 @@ app.delete('/products-delete/:id', async(req,res) =>{
 
 
 const port = 8080
-
-
-
 mongoose.set("strictQuery", false)
 mongoose.
-connect('MongooseDB connection string inserted here')
+connect('MongoDB connection string goes here')
 .then(() => {
     app.listen(port, () =>{
         console.log('operating on port 8080')
